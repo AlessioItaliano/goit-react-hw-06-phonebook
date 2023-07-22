@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from '../../redax/contactSlice';
+import { deleteContact } from '../../redux/contactSlice';
 
 import {
   ContactListUl,

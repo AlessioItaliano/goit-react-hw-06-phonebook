@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilterContacts } from '../../redax/filterSlice';
+import { setFilterContacts } from '../../redux/filterSlice';
+import { getContactsFilter } from 'redux/selectors';
 
 import {
   ContactsFilterForm,
@@ -9,7 +10,7 @@ import {
 
 const ContactsFilter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.filters.filter);
+  const filter = useSelector(getContactsFilter);
 
   const filterContacts = ({ currentTarget: { value } }) => {
     const normalizedValue = value.toLowerCase().trim();
